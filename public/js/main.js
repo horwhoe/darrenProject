@@ -5,9 +5,11 @@ $(document).ready(function() {
 
   $('#trackingButton').on('click', function () {
     var $btn = $(this).button('loading');
-    setTimeout(function() {
+    $.get("track", function(data) {
+      $("#cool").html(data);
       $btn.button('reset');
-    }, 2000);
+    });
+    return false;
   });
 
   $("#backToTop").on('click', function() {
