@@ -1,0 +1,10 @@
+body {
+  padding-top: 70px;
+}
+
+.user {
+  height: 50px;
+  vertical-align: middle;
+  margin:auto;
+  top: 50%;
+}
