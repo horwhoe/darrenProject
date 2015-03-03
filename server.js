@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());				// prepare/setup session for request
 app.use(session({secret: 'trackingCompanySecretKey', key: 'express.sid', myid: 'coolStuff'}));
 
-app.get('/track', tracking.query);
+app.get('/track/:id', tracking.queryById);
 
 app.setMaxListeners(0);
 
